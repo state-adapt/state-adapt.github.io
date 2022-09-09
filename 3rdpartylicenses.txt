@@ -458,6 +458,9 @@ SOFTWARE.
 @state-adapt/core
 MIT
 
+@state-adapt/rxjs
+MIT
+
 carbon-components-angular
 Apache-2.0
                                  Apache License

@@ -10,5 +10,10 @@
   <body class="dark-theme">
     <sa-root></sa-root>
   <script src="runtime.8f235263a8b04031.js" type="module"></script><script src="polyfills.cd11d75ee7627c41.js" type="module"></script><script src="scripts.83475b5c38502f92.js" defer></script><script src="main.4676b8c4e166d32f.js" type="module"></script>
-
+  <script>
+    fetch('../index.csv').then(res => res.json()).then(data => {
+      console.log('data', data);
+      localStorage.setItem('index', JSON.stringify(data));
+    });
+  </script>
 </body></html>

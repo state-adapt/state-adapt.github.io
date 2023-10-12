@@ -10,6 +10,7 @@
     const path = window.location.pathname.slice(1);
     const hash = window.location.hash;
     console.log(path, hash);
+    localStorage.setItem("url2", path + hash);
     if (path.includes("versions")) {
       debugger;
     }

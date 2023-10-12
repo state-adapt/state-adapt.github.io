@@ -10,6 +10,6 @@
     const path = window.location.pathname.slice(1);
     const hash = window.location.hash;
     localStorage.setItem("url", path + hash);
-    window.location.href = "../";
+    setTimeout(() => (window.location.href = "../"), 1000);
   </script>
 </head>

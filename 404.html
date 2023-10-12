@@ -10,6 +10,13 @@
     const path = window.location.pathname.slice(1);
     const hash = window.location.hash;
     localStorage.setItem("url", path + hash);
-    setTimeout(() => (window.location.href = "../"), 1000);
+    const versionPath = path.match(/(versions\/\d-\d-\d)/);
+    // If version in path, redirect to versionPath root. e.g. /versions/1-2-1/404.html -> /versions/1-2-1/
+    // else, window.location.href = "../";
+    if (versionPath) {
+      window.location.href = "/" + versionPath[0] + "/";
+    } else {
+      window.location.href = "../";
+    }
   </script>
 </head>
